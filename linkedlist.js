@@ -1,21 +1,30 @@
-class node{
+class node {
     constructor(value){
-        this.value=value;
-        this.next=null;
+        this.value=value
+        this.next=null
     }
 }
-// // nodeclass
+
 class linkedlist{
-    constructor(){
-        this.head=null;
-    }
-    insertFirst(data){
-        this.head=new node(data,this.head);
-    }
+ constructor(){
+    this.head=null
+ }   
+ insertone(data){
+const newnode =new node(data)
+newnode.next=this.head
+this.head=newnode
+ }
 }
-const ll=new linkedlist();
-ll.insertFirst(100);
+const ll =new linkedlist()
+ll.insertone(3)
+
 console.log(ll);
+
+
+
+
+
+
 
 // // when u create a linked list (head)will be empty and pointer will be null we can change 
 // // this.size property is to track number of nodes in linkedlist
@@ -49,3 +58,7 @@ console.log(ll);
 //         }
 //     }
 // };
+
+// this represents single nodes
+
+
