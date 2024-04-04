@@ -26,16 +26,33 @@ class linkedlist {
         res+='null';
         console.log(res);
     }
-    
+    reverse() {
+        let prev = null
+        let curr = this.head
+        let next = null
+        while (curr !== null) {
+            next=curr.next
+            curr.next=prev
+            prev=curr
+            curr=next
+         }
+         this.head=prev
+        }
+       
+       
+    }
 
 
-}
 const ll = new linkedlist()
-ll.insertone(3)
+ll.insertone(2)
 ll.insertone(4)
 ll.insertone(5)
 
 ll.print()
+ll.reverse()
+ll.print()
+
+
 
 
 
