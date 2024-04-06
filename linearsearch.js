@@ -1,5 +1,5 @@
 const arr=[4,5,6,7,8,9]
-const x=10;
+const x=78;
 function linearSearch(arr,x){
     for(var i=0;i<arr.length;i++){
         if(arr[i]===x){
@@ -10,6 +10,9 @@ function linearSearch(arr,x){
 }
 const index=linearSearch(arr,x);
 console.log(index);
+
+
+
 
 // function linearSearch(array, target) {
 //     for (let i = 0; i < array.length; i++) {

@@ -8,6 +8,7 @@
 //   }
 //   console.log(fib(0));
 // let n=5
+
 function fib(n){
   if(n<=1){
     return 1;
