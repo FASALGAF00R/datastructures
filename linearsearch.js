@@ -33,7 +33,7 @@ console.log(index);
 //         return i;
 //       }
 //     }
-//     return -1;
+//     return -1;                                              
 //   }
   
 //   const arr = ['apple', 'banana', 'orange', 'pear', 'grape'];
