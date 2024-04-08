@@ -27,12 +27,19 @@ class stack{
     peek(){
         return this.top?this.top.data:null;
     }
-    // getSize(){
-    //     return this.top+ 1;
-    // }
-    // isFull() {
-    //     return this.top === this.size - 1;
-    //   }    
+    getSize(){
+   let size=0
+   let curr=this.top
+   while(curr!=null){
+    size++
+    curr=curr.next
+   }
+   return size
+    }
+
+    isFull() {
+        return this.top === this.size - 1;
+      }    
     display(){
         let current=this.top;
         while(current!=null){
@@ -43,13 +50,32 @@ class stack{
 }
 const mystack=new stack();
 mystack.push(10);
-mystack.push(20);
+mystack.push(60);
 mystack.push(30);
 mystack.push(40);
+mystack.pop()
 console.log("peak element is:",mystack.peek());
-console.log(mystack.getSize);
-// console.log(mystack.isFull());
-mystack.display();
+// console.log(mystack.getSize());
+console.log(mystack.isFull());
+
+mystack.display()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
