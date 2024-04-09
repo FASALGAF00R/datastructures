@@ -41,23 +41,51 @@
 //   }
 // }
 //   console.log(quicksort(arr));
-const a=[7,4,5,9,10];
+
+// const a = [7, 4, 5, 9, 10];
+// function quick(a) {
+//   if (a.length <= 1) {
+//     return a;
+//   } else {
+//     const pivot = a[a.length - 1];
+//     const left = [];
+//     const right = [];
+//     for (i = 0; i < a.length - 1; i++) {
+//       if (a[i] < pivot) {
+//         left.push(a[i]);
+//       } else {
+//         right.push(a[i]);
+//       }
+//     }
+
+//     return [...quick(left), pivot, ...quick(right)];
+//   }
+// }
+// console.log(quick(a));
+
+
+const a = [4, 5, 3, 2, 8, 5]
+
 function quick(a) {
-if(a.length<=1){
-  return a;
-}else{
-  const pivot=a[a.length-1];
-  const left=[];
-  const right=[];
-for(i=0;i<a.length-1;i++){
-  if(a[i]<pivot){
-    left.push(a[i]);
-  }else{
-    right.push(a[i]);
+  if (a.length <= 1) {
+    return a
+  } else {
+    let left = []
+    let right = []
+    let pivot = a[a.length - 1]
+    for (let i = 0; i < a.length-1; i++) {
+      if (a[i] < pivot) {
+        left.push(a[i])
+      } else {
+        right.push(a[i])
+      }
+    }
+    return [...quick(left), pivot, ...quick(right)]
+
   }
+
 }
 
-return [...quick(left),pivot,...quick(right)];
-}
-}
-console.log(quick(a));
+
+let ac = quick(a)
+console.log(ac);
