@@ -8,6 +8,7 @@ class stack{
     constructor(){
         this.top=null;
     }
+    
     push(data){
         const newNode=new stackNode(data);
         newNode.next=this.top;
