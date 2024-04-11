@@ -6,7 +6,7 @@ class treenode{
     }
 }
 
-class bt{
+class bst{
     constructor(){
         this.root=null
     }
@@ -35,13 +35,22 @@ class bt{
         }
     }
 
+    preOrderTraversal(node = this.root) {
+        if (node) {
+            console.log(node.value); // Display the value of the current node
+            this.preOrderTraversal(node.left); // Recursively traverse the left subtree
+            this.preOrderTraversal(node.right); // Recursively traverse the right subtree
+        }
+    }
 }
 
-const binarytree=new bt()
-binarytree.insert(5)
-binarytree.insert(6)
-binarytree.insert(2)
-binarytree.insert(3)
-binarytree.insert(1)
 
-console.log(binarytree.root);
+
+const binarystree=new bst()
+binarystree.insert(6)
+binarystree.insert(2)
+binarystree.insert(5)
+binarystree.insert(3)
+binarystree.insert(1)
+
+binarystree.preOrderTraversal();
